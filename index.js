@@ -133,6 +133,11 @@ app.get('/home', async (req, res) => {
     res.json(selectedUser)
 })
 
+app.get('/testeapi', (req, res)=>{
+    
+    res.send('api ok meu cria')
+})
+
 
 app.post('/profiles', async (req, res) => {
     const id = req.body.id
