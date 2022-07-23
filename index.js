@@ -186,8 +186,8 @@ app.post('/store/checkout', async (req, res) => {
                     quantity: item.qty
                 }
             }),
-            success_url: `http://localhost:3000/store`,
-            cancel_url: `http://localhost:3000/store`,
+            success_url: `https://musical-sawine-3744d0.netlify.app/store`,
+            cancel_url: `https://musical-sawine-3744d0.netlify.app/home`,
         })
         res.send(session.url)
     } catch (e) {
