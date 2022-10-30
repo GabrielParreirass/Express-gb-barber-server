@@ -180,13 +180,9 @@ app.post('/store/checkout', async (req, res) => {
                         currency: 'brl',
                         product_data: {
                             name: item.name,
-                       
+                            description:'Tamanho: M | Nome Personalizado: Gabriel | Numero Personalizado: 26'
                         },
-                        metadata:{
-                                number:'Gabriel',
-                                namePerso: '26',
-                                size:'M'
-                            },
+                  
                         unit_amount: item.value * 100
                     },
                     quantity: item.qty
