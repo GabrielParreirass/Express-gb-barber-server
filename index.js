@@ -172,14 +172,15 @@ app.get('/store', async (req, res) => {
 app.post('/store/checkout', async (req, res) => {
     try {
         const session = await stripe.checkout.sessions.create({
-            payment_method_types: ['card', 'pix'],
+            payment_method_types: ['card'],
             mode: 'payment',
             line_items: req.body.items.map(item => {
                 return {
                     price_data: {
                         currency: 'brl',
                         product_data: {
-                            name: item.name
+                            name: item.name,
+                            description: 'Gabriel 26'
                         },
                         unit_amount: item.value * 100
                     },
